@@ -1,13 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Animato Frontend Test Page</title>
     <link rel="stylesheet" href="dist/css/main.css">
 </head>
+
 <body>
+
+    <header class="page-header">
+        <div class="page-header__bar">
+            <a href="#" class="page-header__logo">
+                <img class="page-header__logo-img" src="images/header-logo.png" alt="" width="32" height="32">
+                <span class="page-header__logo-text">Untitled UI</span>
+            </a>
+            <nav class="page-header__nav" aria-label="Hlavní navigace">
+                <ul class="page-header__nav-list">
+                    <li class="page-header__nav-item"><a class="page-header__nav-link" href="#">Home</a></li>
+                    <li class="page-header__nav-item"><a class="page-header__nav-link" href="#">Products</a></li>
+                    <li class="page-header__nav-item page-header__nav-item--has-dropdown">
+                        <a class="page-header__nav-link" href="#" aria-expanded="false" aria-haspopup="true" id="resources-trigger">Resources</a>
+                        <div class="page-header__submenu" aria-hidden="true" id="resources-submenu">
+                            <ul class="page-header__submenu-list">
+                                <li class="page-header__submenu-item">
+                                    <a href="#" class="page-header__submenu-link">
+                                        <span class="page-header__submenu-heading">About us</span>
+                                        <span class="page-header__submenu-description">Learn about our story and our mission statement.</span>
+                                    </a>
+                                </li>
+                                <li class="page-header__submenu-item">
+                                    <a href="#" class="page-header__submenu-link">
+                                        <span class="page-header__submenu-heading">Press</span>
+                                        <span class="page-header__submenu-description">News and writings, press releases, and resources.</span>
+                                    </a>
+                                </li>
+                                <li class="page-header__submenu-item">
+                                    <a href="#" class="page-header__submenu-link">
+                                        <span class="page-header__submenu-heading">Careers</span>
+                                        <span class="page-header__submenu-description">We're always looking for talented people. Join us!</span>
+                                    </a>
+                                </li>
+                                <li class="page-header__submenu-item">
+                                    <a href="#" class="page-header__submenu-link">
+                                        <span class="page-header__submenu-heading">Legal</span>
+                                        <span class="page-header__submenu-description">All the boring stuff that we Dan from legal made us add.</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="page-header__nav-item"><a class="page-header__nav-link" href="#">Pricing</a></li>
+                </ul>
+            </nav>
+            <div class="page-header__actions">
+                <button type="button" class="page-header__btn">Log in</button>
+                <button type="button" class="page-header__btn page-header__btn--primary">Sign up</button>
+            </div>
+        </div>
+    </header>
 
     <script src="dist/js/main.js"></script>
 </body>
-</html> 
+
+</html>
