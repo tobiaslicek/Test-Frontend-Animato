@@ -5,9 +5,14 @@ $font-family-base: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial,
 $color-white: #ffffff;          // bg and white headings
 $color-text-primary: #111322;   // headings
 $color-text-secondary: #4a5578; // body text
+$color-text-tertiary: #E9D7FE; // faq text
 $color-text-nav: #404968;       // nav links
+$color-text-heading: #111322;   // headings (alias)
+$color-text-muted: #4a5578;     // muted text
+$color-border-button: #e4e7ec;   // button border
+$color-border-faq: #b692f6;   // button border
 $color-brand-500: #7f56d9;      // primary button bg
-$color-brand-600: #6941c6;      // eyebrow / accent  
+$color-brand-600: #7b6f96;      // eyebrow / accent  
 $color-brand-700: #53389e;      // FAQ section bg
 
 // Layout
