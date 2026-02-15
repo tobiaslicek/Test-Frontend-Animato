@@ -1,0 +1,45 @@
+@use "../abstracts/variables" as *;
+
+body {
+  font-family: $font-family-base;
+  font-size: 16px;
+  color: $color-text-secondary;
+}
+
+h1, h2, h3 {
+  color: $color-text-primary;
+}
+
+.hero__title {
+  font-size: 60px;
+  line-height: 72px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.faq__title,
+.grid__heading {
+  font-size: 36px;
+  line-height: 44px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.hero__description,
+.faq__subtitle,
+.grid__description {
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 400;
+  color: $color-text-secondary;
+}
+
+.hero__eyebrow,
+.grid__eyebrow {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $color-brand-600;
+}
