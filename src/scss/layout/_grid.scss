@@ -1,0 +1,259 @@
+@use '../abstracts/variables' as *;
+
+.grid.container {
+  padding-inline: $container-padding-desktop;
+
+  @media (max-width: $bp-lg) {
+    padding-inline: $container-padding-mobile;
+  }
+}
+
+.grid__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: $space-8;
+  margin-bottom: $space-8;
+
+  @media (max-width: $bp-lg) {
+    flex-direction: column;
+    align-items: stretch;
+    margin-bottom: $space-8;
+  }
+}
+
+.grid__intro {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.grid__eyebrow {
+  font-family: $font-family-base;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  color: $color-grid-eyebrow;
+  margin-bottom: $space-3;
+}
+
+.grid__heading {
+  font-family: $font-family-base;
+  font-size: clamp(30px, 2.5vw, 36px);
+  font-weight: 600;
+  line-height: 44px;
+  color: $color-text-primary;
+  margin-bottom: $space-5;
+}
+
+.grid__description {
+  font-family: $font-family-base;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  color: $color-text-secondary;
+  margin-bottom: 0;
+}
+
+.grid__actions {
+  display: flex;
+  flex-direction: row;
+  gap: $space-4;
+  flex-shrink: 0;
+
+  @media (max-width: $bp-lg) {
+    flex-direction: column;
+  }
+}
+
+.grid__btn {
+  white-space: nowrap;
+
+  @media (max-width: $bp-lg) {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+.grid__btn.btn--primary {
+  @media (max-width: $bp-lg) {
+    order: -1;
+  }
+}
+
+.grid__lists {
+  display: grid;
+  gap: $space-8;
+
+  @media (max-width: $bp-lg) {
+    display: block;
+  }
+}
+
+.grid__list {
+  display: grid;
+  gap: $space-8;
+  grid-template-rows: 320px 240px 320px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  @media (max-width: $bp-lg) {
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+    grid-auto-rows: auto;
+    gap: $space-6;
+
+    >.grid__item {
+      grid-column: auto !important;
+      grid-row: auto !important;
+    }
+  }
+}
+
+.grid__list--mobile-only {
+  display: none;
+
+  @media (max-width: $bp-lg) {
+    display: grid;
+    margin-top: $space-6;
+  }
+}
+
+.grid__list--top {
+  grid-template-columns: 392fr 392fr 528fr;
+
+  >.grid__item:nth-child(1) {
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+  }
+
+  >.grid__item:nth-child(2) {
+    grid-column: 3;
+    grid-row: 1;
+  }
+
+  >.grid__item:nth-child(3) {
+    grid-column: 3;
+    grid-row: 2 / 4;
+  }
+
+  >.grid__item:nth-child(4) {
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  >.grid__item:nth-child(5) {
+    grid-column: 2;
+    grid-row: 3;
+  }
+
+  @media (max-width: $bp-lg) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.grid__list--bottom {
+  grid-template-columns: 528fr 392fr 392fr;
+
+  >.grid__item:nth-child(1) {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  >.grid__item:nth-child(2) {
+    grid-column: 1;
+    grid-row: 2 / 4;
+  }
+
+  >.grid__item:nth-child(3) {
+    grid-column: 2 / 4;
+    grid-row: 1 / 3;
+  }
+
+  >.grid__item:nth-child(4) {
+    grid-column: 2;
+    grid-row: 3;
+  }
+
+  >.grid__item:nth-child(5) {
+    grid-column: 3;
+    grid-row: 3;
+  }
+
+  @media (max-width: $bp-lg) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.grid__item {
+  min-height: 0;
+}
+
+.grid__item-link {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 200px;
+  color: $color-white;
+  text-decoration: none;
+  border-radius: 0;
+  overflow: hidden;
+
+  &:focus-visible {
+    outline: 2px solid $color-brand-500;
+    outline-offset: 2px;
+  }
+
+  @media (max-width: $bp-lg) {
+    aspect-ratio: 4 / 5;
+    height: auto;
+  }
+}
+
+.grid__item-img {
+  display: block;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.grid__item-overlay {
+  display: flex;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  align-items: center;
+  justify-content: space-between;
+  gap: $space-4;
+  padding: $space-6 $space-6 $space-8;
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-top: 1px solid rgba($color-white, 0.3);
+}
+
+.grid__item-name {
+  font-family: $font-family-base;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 38px;
+  color: inherit;
+}
+
+.grid__item-arrow {
+  display: block;
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
