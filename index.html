@@ -5,15 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Animato Frontend Test Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="dist/css/main.css">
 </head>
 
 <body>
 
-    <header class="page-header">
+    <header class="page-header container">
         <div class="page-header__bar">
             <a href="#" class="page-header__logo">
-                <img class="page-header__logo-img" src="images/header-logo.png" alt="" width="32" height="32">
+                <img class="page-header__logo-img" src="images/header-logo.svg" alt="" width="32" height="32">
                 <span class="page-header__logo-text">Untitled UI</span>
             </a>
             <nav class="page-header__nav" aria-label="Hlavní navigace">
@@ -60,134 +63,165 @@
                 </ul>
             </nav>
             <div class="page-header__actions">
-                <a href="#" class="page-header__btn">Log in</a>
-                <a href="#" class="page-header__btn page-header__btn--primary">Sign up</a>
+                <a href="#" class="page-header__btn btn btn--ghost">Log in</a>
+                <a href="#" class="page-header__btn btn btn--primary">Sign up</a>
             </div>
         </div>
     </header>
     <main class="main">
-        <section class="hero">
+        <section class="hero container">
             <div class="hero__content">
                 <p class="hero__eyebrow">POWERFUL PRODUCT</p>
                 <h1 class="hero__title">People who care about your growth</h1>
                 <p class="hero__description">Powerful, self-serve product and growth analytics to help you convert,
                     engage, and retain more.</p>
-                <a href="#" class="hero__btn">Get started</a>
+                <a href="#" class="hero__btn btn btn--primary btn--lg">Get started</a>
             </div>
-            <img src="images/hero-image.png" alt="Man with phone on steps" class="hero__img">
+            <img src="images/hero-image.jpg" alt="Man with phone on steps" class="hero__img">
         </section>
-        <section class="hero hero--reverse">
+        <section class="hero hero--reverse container">
             <div class="hero__content">
                 <p class="hero__eyebrow">PEOPLE</p>
                 <h2 class="hero__title">People who care about your growth</h2>
                 <p class="hero__description">Powerful, self-serve product and growth analytics to help you convert,
                     engage, and retain more.</p>
-                <a href="#" class="hero__btn">Get started</a>
+                <a href="#" class="hero__btn btn btn--primary btn--lg">Get started</a>
             </div>
-            <img src="images/hero-image2.png" alt="" class="hero__img" aria-hidden="true">
+            <img src="images/hero-image2.jpg" alt="" class="hero__img" aria-hidden="true">
         </section>
-        <section class="faq" aria-labelledby="faq-heading">
-            <h2 class="faq__title" id="faq-heading">Frequently asked questions</h2>
-            <p class="faq__subtitle">Everything you need to know about the product and billing.</p>
-            <div class="faq__list" role="list">
-                <article class="faq__item">
-                    <h3 class="faq__item-heading">
-                        <button type="button" class="faq__trigger" aria-expanded="true" aria-controls="faq-answer-1"
-                            id="faq-trigger-1">
-                            Is there a free trial available?
-                            <span class="faq__icon" aria-hidden="true"></span>
-                        </button>
-                    </h3>
-                    <div class="faq__answer" id="faq-answer-1" aria-labelledby="faq-trigger-1">
-                        <p class="faq__answer-text">Yes, you can try us for free for 30 days. If you want, we’ll provide
-                            you with a free, personalized 30-minute onboarding call to get you up and running as soon as
-                            possible.</p>
-                    </div>
-                </article>
-                <article class="faq__item">
-                    <h3 class="faq__item-heading">
-                        <button type="button" class="faq__trigger" aria-expanded="false" aria-controls="faq-answer-2"
-                            id="faq-trigger-2">
-                            Can I change my plan later?
-                            <span class="faq__icon" aria-hidden="true"></span>
-                        </button>
-                    </h3>
-                    <div class="faq__answer" id="faq-answer-2" aria-labelledby="faq-trigger-2" hidden>
-                        <p class="faq__answer-text">Yes, you can try us for free for 30 days. If you want, we’ll provide
-                            you with a free, personalized 30-minute onboarding call to get you up and running as soon as
-                            possible.</p>
-                    </div>
-                </article>
-                <article class="faq__item">
-                    <h3 class="faq__item-heading">
-                        <button type="button" class="faq__trigger" aria-expanded="false" aria-controls="faq-answer-3"
-                            id="faq-trigger-3">
-                            What is your cancellation policy?
-                            <span class="faq__icon" aria-hidden="true"></span>
-                        </button>
-                    </h3>
-                    <div class="faq__answer" id="faq-answer-3" aria-labelledby="faq-trigger-3" hidden>
-                        <p class="faq__answer-text">Yes, you can try us for free for 30 days. If you want, we’ll provide
-                            you with a free, personalized 30-minute onboarding call to get you up and running as soon as
-                            possible.</p>
-                    </div>
-                </article>
-                <article class="faq__item">
-                    <h3 class="faq__item-heading">
-                        <button type="button" class="faq__trigger" aria-expanded="false" aria-controls="faq-answer-4"
-                            id="faq-trigger-4">
-                            Can other info be added to an invoice?
-                            <span class="faq__icon" aria-hidden="true"></span>
-                        </button>
-                    </h3>
-                    <div class="faq__answer" id="faq-answer-4" aria-labelledby="faq-trigger-4" hidden>
-                        <p class="faq__answer-text">Yes, you can try us for free for 30 days. If you want, we’ll provide
-                            you with a free, personalized 30-minute onboarding call to get you up and running as soon as
-                            possible.</p>
-                    </div>
-                </article>
-                <article class="faq__item">
-                    <h3 class="faq__item-heading">
-                        <button type="button" class="faq__trigger" aria-expanded="false" aria-controls="faq-answer-5"
-                            id="faq-trigger-5">
-                            How does billing work?
-                            <span class="faq__icon" aria-hidden="true"></span>
-                        </button>
-                    </h3>
-                    <div class="faq__answer" id="faq-answer-5" aria-labelledby="faq-trigger-5" hidden>
-                        <p class="faq__answer-text">Yes, you can try us for free for 30 days. If you want, we’ll provide
-                            you with a free, personalized 30-minute onboarding call to get you up and running as soon as
-                            possible.</p>
-                    </div>
-                </article>
-                <article class="faq__item">
-                    <h3 class="faq__item-heading">
-                        <button type="button" class="faq__trigger" aria-expanded="false" aria-controls="faq-answer-6"
-                            id="faq-trigger-6">
-                            How do I change my account email?
-                            <span class="faq__icon" aria-hidden="true"></span>
-                        </button>
-                    </h3>
-                    <div class="faq__answer" id="faq-answer-6" aria-labelledby="faq-trigger-6" hidden>
-                        <p class="faq__answer-text">Yes, you can try us for free for 30 days. If you want, we’ll provide
-                            you with a free, personalized 30-minute onboarding call to get you up and running as soon as
-                            possible.</p>
-                    </div>
-                </article>
+        <section class="faq" data-accordion="vanilla" aria-labelledby="faq-heading">
+            <div class="container container--faq">
+                <h2 class="faq__title" id="faq-heading">Frequently asked questions</h2>
+                <p class="faq__subtitle">Everything you need to know about the product and billing.</p>
+                <div class="faq__list">
+                    <article class="faq__item">
+                        <h3 class="faq__item-heading">
+                            <button type="button" class="faq__trigger" aria-expanded="true" aria-controls="faq-answer-1"
+                                id="faq-trigger-1">
+                                Is there a free trial available?
+                                <span class="faq__icon" aria-hidden="true">
+                                <img src="images/icons/icon--faq-plus.svg" alt="" class="faq__icon-plus" width="24" height="24">
+                                <img src="images/icons/icon--faq-minus.svg" alt="" class="faq__icon-minus" width="24" height="24">
+                            </span>
+                            </button>
+                        </h3>
+                        <div class="faq__answer faq__answer--open" id="faq-answer-1" aria-labelledby="faq-trigger-1" aria-hidden="false">
+                            <p class="faq__answer-text">Yes, you can try us for free for 30 days. If you want, we’ll
+                                provide
+                                you with a free, personalized 30-minute onboarding call to get you up and running as
+                                soon as
+                                possible.</p>
+                        </div>
+                    </article>
+                    <article class="faq__item">
+                        <h3 class="faq__item-heading">
+                            <button type="button" class="faq__trigger" aria-expanded="false"
+                                aria-controls="faq-answer-2" id="faq-trigger-2">
+                                Can I change my plan later?
+                                <span class="faq__icon" aria-hidden="true">
+                                <img src="images/icons/icon--faq-plus.svg" alt="" class="faq__icon-plus" width="24" height="24">
+                                <img src="images/icons/icon--faq-minus.svg" alt="" class="faq__icon-minus" width="24" height="24">
+                            </span>
+                            </button>
+                        </h3>
+                        <div class="faq__answer" id="faq-answer-2" aria-labelledby="faq-trigger-2" aria-hidden="true">
+                            <p class="faq__answer-text">Yes, you can try us for free for 30 days. If you want, we’ll
+                                provide
+                                you with a free, personalized 30-minute onboarding call to get you up and running as
+                                soon as
+                                possible.</p>
+                        </div>
+                    </article>
+                    <article class="faq__item">
+                        <h3 class="faq__item-heading">
+                            <button type="button" class="faq__trigger" aria-expanded="false"
+                                aria-controls="faq-answer-3" id="faq-trigger-3">
+                                What is your cancellation policy?
+                                <span class="faq__icon" aria-hidden="true">
+                                <img src="images/icons/icon--faq-plus.svg" alt="" class="faq__icon-plus" width="24" height="24">
+                                <img src="images/icons/icon--faq-minus.svg" alt="" class="faq__icon-minus" width="24" height="24">
+                            </span>
+                            </button>
+                        </h3>
+                        <div class="faq__answer" id="faq-answer-3" aria-labelledby="faq-trigger-3" aria-hidden="true">
+                            <p class="faq__answer-text">Yes, you can try us for free for 30 days. If you want, we’ll
+                                provide
+                                you with a free, personalized 30-minute onboarding call to get you up and running as
+                                soon as
+                                possible.</p>
+                        </div>
+                    </article>
+                    <article class="faq__item">
+                        <h3 class="faq__item-heading">
+                            <button type="button" class="faq__trigger" aria-expanded="false"
+                                aria-controls="faq-answer-4" id="faq-trigger-4">
+                                Can other info be added to an invoice?
+                                <span class="faq__icon" aria-hidden="true">
+                                <img src="images/icons/icon--faq-plus.svg" alt="" class="faq__icon-plus" width="24" height="24">
+                                <img src="images/icons/icon--faq-minus.svg" alt="" class="faq__icon-minus" width="24" height="24">
+                            </span>
+                            </button>
+                        </h3>
+                        <div class="faq__answer" id="faq-answer-4" aria-labelledby="faq-trigger-4" aria-hidden="true">
+                            <p class="faq__answer-text">Yes, you can try us for free for 30 days. If you want, we’ll
+                                provide
+                                you with a free, personalized 30-minute onboarding call to get you up and running as
+                                soon as
+                                possible.</p>
+                        </div>
+                    </article>
+                    <article class="faq__item">
+                        <h3 class="faq__item-heading">
+                            <button type="button" class="faq__trigger" aria-expanded="false"
+                                aria-controls="faq-answer-5" id="faq-trigger-5">
+                                How does billing work?
+                                <span class="faq__icon" aria-hidden="true">
+                                <img src="images/icons/icon--faq-plus.svg" alt="" class="faq__icon-plus" width="24" height="24">
+                                <img src="images/icons/icon--faq-minus.svg" alt="" class="faq__icon-minus" width="24" height="24">
+                            </span>
+                            </button>
+                        </h3>
+                        <div class="faq__answer" id="faq-answer-5" aria-labelledby="faq-trigger-5" aria-hidden="true">
+                            <p class="faq__answer-text">Yes, you can try us for free for 30 days. If you want, we’ll
+                                provide
+                                you with a free, personalized 30-minute onboarding call to get you up and running as
+                                soon as
+                                possible.</p>
+                        </div>
+                    </article>
+                    <article class="faq__item" data-accordion-item="alpine" x-data="{ open: false }" @accordion-close-alpine.window="open = false">
+                        <h3 class="faq__item-heading">
+                            <button type="button" class="faq__trigger" @click="open = !open; if (open) { $dispatch('accordion-close-vanilla') }" :aria-expanded="open">
+                                How do I change my account email?
+                                <span class="faq__icon" aria-hidden="true">
+                                    <img src="images/icons/icon--faq-plus.svg" alt="" class="faq__icon-plus" width="24" height="24">
+                                    <img src="images/icons/icon--faq-minus.svg" alt="" class="faq__icon-minus" width="24" height="24">
+                                </span>
+                            </button>
+                        </h3>
+                        <div class="faq__answer" :class="{ 'faq__answer--open': open }" :aria-hidden="!open">
+                            <p class="faq__answer-text">Yes, you can try us for free for 30 days. If you want, we’ll
+                                provide
+                                you with a free, personalized 30-minute onboarding call to get you up and running as
+                                soon as
+                                possible.</p>
+                        </div>
+                    </article>
+                </div>
             </div>
         </section>
-        <section class="grid" aria-labelledby="team-heading">
+        <section class="grid container" aria-labelledby="team-heading">
             <div class="grid__intro">
                 <p class="grid__eyebrow">Our team</p>
                 <h2 class="grid__heading" id="team-heading">Some of the people you’ll be working with</h2>
                 <p class="grid__description">We’re a 100% remote team spread all across the world. Join us!</p>
             </div>
             <div class="grid__actions">
-                <a href="#" class="grid__btn">About us</a>
-                <a href="#" class="grid__btn grid__btn--primary">Open positions</a>
+                <a href="#" class="grid__btn btn btn--secondary">About us</a>
+                <a href="#" class="grid__btn btn btn--primary">Open positions</a>
             </div>
 
-            <ul class="grid__list" role="list">
+            <ul class="grid__list">
                 <li class="grid__item">
                     <a href="#" class="grid__item-link">
                         <img src="images/team/alisa-hester.png" alt="Alisa Hester" class="grid__item-img" width="400"
@@ -252,6 +286,8 @@
         </section>
     </main>
 
+    <script defer src="https://unpkg.com/alpinejs@3/dist/cdn.min.js"></script>
+    <script src="dist/js/accordion-vanilla.js"></script>
     <script src="dist/js/main.js"></script>
 </body>
 
