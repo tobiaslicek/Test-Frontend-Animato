@@ -105,6 +105,11 @@
 
   @media (max-width: $bp-lg) {
     display: block;
+    
+    .grid__list--top,
+    .grid__list--bottom {
+      display: none;
+    }
   }
 }
 
