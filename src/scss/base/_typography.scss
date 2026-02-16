@@ -11,7 +11,7 @@ h1, h2, h3 {
 }
 
 .hero__title {
-  font-size: 60px;
+  font-size: $fs-display-xl;
   line-height: 72px;
   font-weight: 600;
   letter-spacing: -0.02em;
@@ -23,6 +23,7 @@ h1, h2, h3 {
   line-height: 44px;
   font-weight: 600;
   letter-spacing: -0.02em;
+  margin-bottom: $space-5;
 }
 
 .hero__description,
@@ -34,8 +35,7 @@ h1, h2, h3 {
   color: $color-text-secondary;
 }
 
-.hero__eyebrow,
-.grid__eyebrow {
+.hero__eyebrow {
   font-size: 12px;
   line-height: 18px;
   font-weight: 600;

@@ -50,7 +50,6 @@
   font-weight: 600;
   line-height: 44px;
   color: $color-text-primary;
-  margin-bottom: $space-5;
 
   @media (max-width: $bp-lg) {
     line-height: 38px;
@@ -105,7 +104,7 @@
 
   @media (max-width: $bp-lg) {
     display: block;
-    
+
     .grid__list--top,
     .grid__list--bottom {
       display: none;

@@ -7,7 +7,10 @@
 .faq__title {
   color: $color-white;
   text-align: center;
-  margin-bottom: $space-5;
+
+  @media (max-width: $bp-lg) {
+    margin-bottom: $space-4;
+  }
 }
 
 .faq__subtitle {
@@ -17,12 +20,19 @@
   line-height: 30px;
   font-weight: 400;
   color: $color-text-tertiary;
+
+  @media (max-width: $bp-lg) {
+    font-size: 18px;
+    line-height: 28px;
+    margin-bottom: $space-12;
+  }
 }
 
 .faq__item {
   padding-top: $space-6;
   padding-bottom: $space-8;
   border-bottom: 1px solid $color-border-faq;
+  cursor: pointer;
 
   &:first-child {
     padding-top: 0;
@@ -95,4 +105,8 @@
   line-height: 24px;
   font-weight: 400;
   color: $color-text-tertiary;
+
+  @media (max-width: $bp-lg) {
+    max-width: calc(100% - 24px - #{$space-4});
+  }
 }
