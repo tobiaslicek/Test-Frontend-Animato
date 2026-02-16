@@ -5,7 +5,7 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
-    padding: 10px 16px; 
+    padding: $space-3 18px; 
     border-radius: $radius-md;
     border: 1px solid transparent;
     font-family: $font-family-base;
@@ -34,7 +34,7 @@
 
 .btn--secondary {
     background: #fff;
-    color: $color-text-heading;
+    color: $color-text-nav;
     border-color: $color-border-button; 
 
     &:hover {
@@ -53,6 +53,13 @@
 }
 
 .btn--lg {
-    padding: 14px 22px; 
+    padding: $space-4 $space-6; 
     border-radius: $radius-md;
+    gap: $space-3;
+
+    @media (max-width: $bp-md) {
+        width: 100%;
+        gap: $space-2;
+        padding-block: $space-3;
+    }
 }
