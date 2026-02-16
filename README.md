@@ -70,4 +70,5 @@ animato/
 - `$bp-xl`: 1280px  
 
 ## Zobrazení stránky
+
 - **https://tobiaslicek.github.io/Test-Frontend-Animato/**
