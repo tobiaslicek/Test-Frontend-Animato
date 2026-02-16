@@ -19,7 +19,7 @@
                     <img class="page-header__logo-img" src="images/header-logo.svg" alt="Picture of logo" width="32" height="32">
                     <img class="page-header__logo-text" src="images/header-logo-text.svg" alt="Text of logo" width="99.5" height="15.5">
                 </a>
-                <nav class="page-header__nav" aria-label="Hlavní navigace">
+                <nav class="page-header__nav" id="page-header__nav" aria-label="Hlavní navigace">
                 <ul class="page-header__nav-list">
                     <li class="page-header__nav-item"><a class="page-header__nav-link" href="#">Home</a></li>
                     <li class="page-header__nav-item"><a class="page-header__nav-link" href="#">Products<span class="page-header__nav-arrow" aria-hidden="true"><img src="images/icon--arrow-down.svg" alt="" width="16" height="16"></span></a></li>
@@ -84,9 +84,17 @@
                 </nav>
             </div>
             <div class="page-header__actions">
-                <a href="#" class="page-header__btn btn btn--ghost">Log in</a>
                 <a href="#" class="page-header__btn btn btn--primary">Sign up</a>
+                <a href="#" class="page-header__btn btn btn--ghost">Log in</a>
             </div>
+            <button type="button" class="page-header__menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="page-header__nav" id="header-menu-toggle">
+                <span class="page-header__menu-toggle-icon page-header__menu-toggle-icon--open" aria-hidden="true">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M3 6H21M3 12H21M3 18H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                </span>
+                <span class="page-header__menu-toggle-icon page-header__menu-toggle-icon--close" aria-hidden="true">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+            </button>
         </div>
     </header>
     <main class="main">

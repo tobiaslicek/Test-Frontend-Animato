@@ -3,6 +3,13 @@
   var SUBMENU_ID = 'resources-submenu';
   var OPEN_CLASS = 'is-open';
   var MAIN_SELECTOR = '.main';
+  var MENU_OPEN_CLASS = 'is-menu-open';
+  var main = document.querySelector(MAIN_SELECTOR);
+
+  function isMobileMenu() {
+    var header = document.querySelector('.page-header');
+    return header && header.classList.contains(MENU_OPEN_CLASS);
+  }
 
   function initHeaderSubmenu() {
     var trigger = document.getElementById(TRIGGER_ID);
@@ -20,9 +27,11 @@
       dropdown.classList.add(OPEN_CLASS);
       trigger.setAttribute('aria-expanded', 'true');
       submenu.setAttribute('aria-hidden', 'false');
-      requestAnimationFrame(function () {
-        if (main) main.style.paddingTop = submenu.offsetHeight + 'px';
-      });
+      if (!isMobileMenu() && main) {
+        requestAnimationFrame(function () {
+          main.style.paddingTop = submenu.offsetHeight + 'px';
+        });
+      }
     }
 
     function close() {
@@ -60,9 +69,35 @@
     });
   }
 
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initHeaderSubmenu);
-  } else {
+  function initMobileMenu() {
+    var toggle = document.getElementById('header-menu-toggle');
+    var header = document.querySelector('.page-header');
+    if (!toggle || !header) return;
+
+    toggle.addEventListener('click', function () {
+      var open = header.classList.toggle(MENU_OPEN_CLASS);
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key !== 'Escape') return;
+      if (!header.classList.contains(MENU_OPEN_CLASS)) return;
+      header.classList.remove(MENU_OPEN_CLASS);
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.setAttribute('aria-label', 'Open menu');
+      toggle.focus();
+    });
+  }
+
+  function init() {
     initHeaderSubmenu();
+    initMobileMenu();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
   }
 })();
