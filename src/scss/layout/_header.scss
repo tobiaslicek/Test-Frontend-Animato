@@ -37,6 +37,8 @@
       grid-template-columns: 1fr auto;
       grid-template-rows: auto auto auto;
       row-gap: $space-8;
+      width: 100%;
+      max-width: 100%;
       padding: $space-4 $space-4 $space-6;
       background: $color-white;
       border-radius: 0 0 $radius-xl $radius-xl;
@@ -306,14 +308,21 @@
   display: flex;
   flex-direction: column;
   gap: $space-2;
+  min-width: 0;
 }
 
 .page-header__nav-footer-link {
-  font-size: 16px;
-  line-height: 24px;
+  display: block;
+  font-size: 14px;
+  line-height: 1.4;
   font-weight: 600;
-  color: $color-text-nav;
+  color: $color-text-secondary;
   text-decoration: none;
+  transition: color 150ms ease;
+
+  &:hover {
+    color: $color-text-primary;
+  }
 }
 
 .page-header__actions {
