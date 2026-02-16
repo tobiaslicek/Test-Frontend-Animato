@@ -17,6 +17,16 @@
 
   function initAccordions() {
     document.querySelectorAll('.faq[data-accordion="vanilla"]').forEach(function (faqSection) {
+      faqSection.querySelectorAll('.faq__item').forEach(function (item) {
+        if (item.hasAttribute('data-accordion-item')) return;
+
+        item.addEventListener('click', function (e) {
+          var trigger = item.querySelector('.faq__trigger');
+          if (!trigger || trigger.contains(e.target)) return;
+          trigger.click();
+        });
+      });
+
       faqSection.querySelectorAll('.faq__trigger').forEach(function (trigger) {
         if (trigger.closest('[data-accordion-item="alpine"]')) return;
         if (trigger.hasAttribute('data-accordion-initialized')) return;
