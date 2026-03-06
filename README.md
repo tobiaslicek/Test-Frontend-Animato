@@ -1,4 +1,4 @@
-# Untitled UI – Frontend Test Page
+# Untitled UI
 
 Jednostránková statická stránka postavená podle Figma. Obsahuje header s dropdownem, hero sekce, FAQ s harmonikami a grid pro týmovou sekci.
 
