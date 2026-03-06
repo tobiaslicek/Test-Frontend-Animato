@@ -1,4 +1,4 @@
-# Animato – Frontend Test Page
+# Untitled UI – Frontend Test Page
 
 Jednostránková statická stránka postavená podle Figma. Obsahuje header s dropdownem, hero sekce, FAQ s harmonikami a grid pro týmovou sekci.
 
@@ -35,7 +35,7 @@ Pro vývoj spusť `npm run dev`, otevři v prohlížeči adresu, kterou vypíše
 ## Struktura projektu
 
 ```
-animato/
+untitled-ui/
 ├── index.html              # Hlavní stránka
 ├── gulpfile.js             # Gulp: styly, skripty, watch, Browser Sync
 ├── package.json
@@ -71,4 +71,4 @@ animato/
 
 ## Zobrazení stránky
 
-- **https://tobiaslicek.github.io/Test-Frontend-Animato/**
+- **https://tobiaslicek.github.io/Test-Frontend-Untitled-UI/**
